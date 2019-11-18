@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Patrick+Hand|Red+Hat+Display&display=swap');
+
+div.home-banner {
+  height: 80vh;
+  background: {
+    image: url('https://res.cloudinary.com/fabrixrus/image/upload/v1574077308/UI.png');
+    position: 520px 20px;
+    size: contain;
+    repeat: no-repeat;
+  }
+  display: flex;
+  overflow-x: hidden;
+  div.text-container {
+    position: absolute;
+    left: 40px;
+    align-self: center;
+    span.banner-logo-text {
+      font: {
+        family: 'Red Hat Display', sans-serif;
+        weight: bold;
+      }
+      color: $secondary-color;
+      text-transform: uppercase;
+    }
+    span.banner-small-text {
+      color: $secondary-color;
+      font: {
+        size: 1.4em;
+        weight: bold;
+        family: 'Pacifico', cursive;
+      }
+    }
+    span.banner-medium-text {
+      text-transform: uppercase;
+      color: $secondary-color;
+      font: {
+        size: 1.8em;
+        weight: lighter;
+        family: 'Patrick Hand', cursive;
+      }
+    }
+  }
+  div.icon-container {
+    position: absolute;
+    bottom: 20px;
+    padding-left: 5px;
+    svg {
+      color: $secondary-color;
+      font-size: 1.4em;
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+      cursor: pointer;
+    }
+  }
+}

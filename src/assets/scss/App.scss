@@ -1,0 +1,42 @@
+@import './_modules/reset';
+@import './_modules/variables';
+
+@import '_pages/meet';
+
+body {
+  max-width: 1480px;
+  width: 95%;
+  margin: auto;
+  background-color: $primary-color;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $primary-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $secondary-color;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $secondary-color;
+  }
+}
+
+// components
+@import './_components/nav';
+
+// Pages
+@import './_pages/home';
+@import './_pages/gallery';
+@import './_pages/testimonials';

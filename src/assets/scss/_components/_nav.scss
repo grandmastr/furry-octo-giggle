@@ -1,0 +1,64 @@
+@import '../_modules/_variables.scss';
+
+nav.nav {
+  padding: ($nav-height - 25) / 2 12px;
+  color: $secondary-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  span.nav-dash {
+    display: block;
+    position: relative;
+    top: -2px;
+    height: 3px;
+    max-width: 80%;
+    width: 55%;
+    margin: auto;
+    background: $secondary-color;
+    border-radius: 5px;
+  }
+  ul {
+    @media (max-width: 512px) {
+      display: none;
+    }
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+    li.active::after {
+      display: block;
+      content: ' ';
+      width: 32px;
+      height: 2px;
+      background: $secondary-color;
+      margin: auto;
+      position: relative;
+      top: 8px;
+    }
+    li:not(:last-child) {
+      margin-right: 20px;
+    }
+    li {
+      color: $secondary-color;
+      text-decoration: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      font: {
+        size: 0.9em;
+        weight: 450;
+      }
+      a{
+        color: $secondary-color;
+        text-decoration: none;
+      }
+      cursor: pointer;
+      text-transform: uppercase;
+      &:active{
+        outline: 1.5px solid $secondary-color;
+      }
+    }
+  }
+}

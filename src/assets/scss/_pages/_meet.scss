@@ -1,0 +1,74 @@
+@import '../_modules/variables';
+
+div.grid-container {
+  display: grid;
+  padding: 10px 20px;
+  width: 95%;
+  margin: auto;
+
+  grid-template-areas: 'member-details member-details member-details member-picture member-roles';
+
+  @media (max-width: $small-screens) {
+    grid-template-areas:
+      'member-details'
+      'member-picture'
+      'member-roles';
+  }
+
+  div:not(:last-child) {
+    margin: 0 10px 20px 0;
+  }
+
+  div.member-details {
+    grid-area: member-details;
+    color: $secondary-color;
+  }
+
+  div.member-picture {
+    grid-area: member-picture;
+    width: 220px;
+    min-height: 250px;
+    background: $secondary-color;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition: 0.2s ease-in-out all;
+    -moz-transition: 0.2s ease-in-out all;
+    -ms-transition: 0.2s ease-in-out all;
+    -o-transition: 0.2s ease-in-out all;
+    transition: 0.2s ease-in-out all;
+    &:hover {
+      box-shadow: -1px 1px 8px $secondary-color;
+      transform: scale(1.01);
+      -webkit-transition: 0.2s ease-in-out all;
+      -moz-transition: 0.2s ease-in-out all;
+      -ms-transition: 0.2s ease-in-out all;
+      -o-transition: 0.2s ease-in-out all;
+      transition: 0.2s ease-in-out all;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  span.member-role {
+    grid-area: member-roles;
+    color: $secondary-color;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 25px;
+    span.name {
+      font: {
+        weight: bold;
+        size: 1em;
+      }
+    }
+    span.role {
+      font: {
+        weight: normal;
+        size: 0.8em;
+      }
+    }
+  }
+}
